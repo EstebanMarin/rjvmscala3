@@ -1,5 +1,5 @@
 object Exceptions:
-  val aWierdValue: Int = throw new java.lang.NullPointerException
+  lazy val aWierdValue: Int = throw new java.lang.NullPointerException
 
   def getInt(withExpections: Boolean): Int =
     if (withExpections) throw new RuntimeException("No Int for you")
