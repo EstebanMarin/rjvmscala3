@@ -63,6 +63,8 @@ object CaseClasses2:
     override def transform(x: Int) = x * 2
   }
 
+  val doubler: Int => Int = _ * 2
+
   class DoublerList extends Transformer[Int, LList[Int]] {
     override def transform(x: Int): LList[Int] =
       new NonEmpty(x, new NonEmpty(x + 1, Empty()))
