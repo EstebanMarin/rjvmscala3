@@ -72,20 +72,20 @@ object HofCurrying:
     val listofInterger: LList[Int] =
       Empty() + 8 + 9 + 5 + 3 + 1 + 2
 
-    // listofInterger.foreach(x => println(x))
+    listofInterger.foreach(println)
 
-    val sortedList = listofInterger.sort((x, y) => x - y)
+    val sortedList = listofInterger.sort(_ + _)
     println(sortedList)
 
     val secondListofInteger: LList[Int] =
       Empty() + 8 + 4 + 5 + 6 + 3 + 6
 
     val testZipWith =
-      listofInterger.zipWith(sortedList, (x, y) => x + y)
+      listofInterger.zipWith(sortedList, _ + _)
 
     println(testZipWith)
 
-    val foldLeftTest = sortedList.foldLeft(0)((x, y) => x + y)
+    val foldLeftTest = sortedList.foldLeft(0)(_ + _)
     println(foldLeftTest)
 
 end HofCurrying
