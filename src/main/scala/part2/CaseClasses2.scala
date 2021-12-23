@@ -77,4 +77,8 @@ object CaseClasses2:
     }
   }
 
+  val add2 = supperAdder(2)
+
+  val result = add2(2)
+
   def main(args: Array[String]): Unit = {}
