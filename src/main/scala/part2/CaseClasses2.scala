@@ -71,12 +71,10 @@ object CaseClasses2:
   val listofInterger: LList[Int] =
     new Empty + 1 + 2 + 3
 
-  // ligthweight data structures
-  case class Person(name: String, age: Int)
-  // 1 - class args are now fields
-  // 2 - elementary methods => toString, equals, hasCode
-  // 3 - utility methods such as .copy
-  // 4 - CCs have companion objects
-  // 5 - CCs are serializable
-  // 6 - CC have Pattern matching
+  val supperAdder: Function1[Int, Function1[Int, Int]] = new Function1 {
+    override def apply(x: Int) = new Function1[Int, Int] {
+      override def apply(y: Int) = x + y
+    }
+  }
+
   def main(args: Array[String]): Unit = {}
