@@ -1,3 +1,4 @@
+import Enums.PermissionsWithBits
 object Enums:
   enum Permissions:
     case READ, WRITE, EXECUTE, NONE
@@ -16,6 +17,8 @@ object Enums:
   object PermissionsWithBits:
     def fromBits(bits: Int): PermissionsWithBits =
       PermissionsWithBits.NONE
+
+    val allPermissions: Array[PermissionsWithBits] = PermissionsWithBits.values
 end Enums
 
 @main def enumsMain =
